@@ -1,7 +1,13 @@
 link(href='/../css/main.less', rel ='stylesheet')
+link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
 html(lang ='en')
 	head
 		title Welcome
-	body
+	body#cover
 		div.coverdiv
-			h1 Welcome to Cabinet 
+			h1(style =" font-family:cursive; color:white" id="head1") Cabinet 
+		div.wrapper
+			div.loginbutton
+				a.myButton(href='#') Log In
+			div.signupbutton
+				a.myButton(href='#') Sign Up

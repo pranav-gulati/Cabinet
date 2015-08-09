@@ -66,7 +66,7 @@ block content
           | Submit 
           i.fa.fa-sign-out
   script.
-    var issues = [false, false, false, false, false];
+    var issues = [false, false, false, false, false, false];
     var cand = [false, false, false, false, false, false, false, false];
     var name = ["Jeb Bush", "Donald Trump", "Chris Christie", "Ted Cruz", "Hillary Clinton", "Joe Biden", "Bernie Sanders", "Jim Webb"];
     var dumb = name.split(",");
@@ -77,6 +77,7 @@ block content
     if (document.getElementById('checkbox3').checked) issues[2] = true;
     if (document.getElementById('checkbox4').checked) issues[3] = true;
     if (document.getElementById('checkbox5').checked) issues[4] = true;
+    if (document.getElementById('checkbox66').checked) issues[5] = true;
     if (document.getElementById('checkbox6').checked) cand[0] = true;
     if (document.getElementById('checkbox7').checked) cand[1] = true;
     if (document.getElementById('checkbox8').checked) cand[2] = true;
@@ -85,18 +86,19 @@ block content
     if (document.getElementById('checkbox11').checked) cand[5] = true;
     if (document.getElementById('checkbox12').checked) cand[6] = true;
     if (document.getElementById('checkbox13').checked) cand[7] = true;
-    document.getElementById('whole').innerHTML = '<h2>Welcome to Cabinet.</h2><hr/><h3>Learn about your candidates.</h3><div class="row">';
+    document.getElementById('whole').innerHTML = '<h2 style = "font-family:cambria">Welcome Srikar.</h2><hr/><h3 style="font-family:cambria">Your Cabinet.</h3><div class="row">';
     var i;
     for (i = 0; i < 4; i++) {
       if (cand[i]) {
-        document.getElementById('whole').innerHTML = document.getElementById('whole').innerHTML + '<div class="col-md-3"> <div class="card hovercard"> <div class="cardheader"> </div> <div class="avatar"> <img alt="" src="' + pic[i] + '"> </div> <div class="info"> <div class="title">' + dumb[i] + '</div> <div class="desc">Republican</div> </div> <div class="bottom"> </div> </div> </div>';
+        document.getElementById('whole').innerHTML = document.getElementById('whole').innerHTML + '<div class="col-md-3"> <div class="card hovercard"> <div class="cardheader"> </div> <div class="avatar"> <img alt="" src="' 
+        + pic[i] + '"> </div> <div class="info"> <div class="title">' + dumb[i] + '</div> <div class="desc">Republican</div> </div> <div class="bottom"><button type="button" class="readButton" data-toggle="modal" data-target="#myModal"> Follow recent news. </button> <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <h4 class="modal-title" id="myModalLabel">Modal title</h4> </div> <div class="modal-body"> ... </div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button> </div> </div> </div> </div></div> </div> </div>';
       }
     }
     document.getElementById('whole').innerHTML = document.getElementById('whole').innerHTML + '</div><div class="row">';
     for (i = 4; i < 8; i++) {
       if (cand[i]) {
-        document.getElementById('whole').innerHTML = document.getElementById('whole').innerHTML + '<div class="col-md-3"> <div class="card hovercard"> <div class="cardheader"> </div> <div class="avatar"> <img alt="" src="' + pic[i] + '"> </div> <div class="info"> <div class="title">' + dumb[i] + '</div> <div class="desc">Democratic</div> </div> <div class="bottom"> </div> </div> </div>';
-      }
+        document.getElementById('whole').innerHTML = document.getElementById('whole').innerHTML + '<div class="col-md-3"> <div class="card hovercard"> <div class="cardheader"> </div> <div class="avatar"> <img alt="" src="' + pic[i] + '"> </div> <div class="info"> <div class="title">' + dumb[i] + '</div> <div class="desc">Democrat</div> </div> <div class="bottom"><button type="button" class="readButton" data-toggle="modal" data-target="#myModal"> Follow recent news. </button> <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <h4 class="modal-title" id="myModalLabel">Modal title</h4> </div> <div class="modal-body"> ... </div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button> </div> </div> </div> </div></div> </div> </div>';
+     }
     }
     document.getElementById('whole').innerHTML = document.getElementById('whole').innerHTML + "</div>"
     }

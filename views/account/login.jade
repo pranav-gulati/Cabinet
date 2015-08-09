@@ -1,32 +1,26 @@
 extends ../layout
 
 block content
-  body(style ="background:'../image/bg_image_cover.jpg")
+  body(style ="background-color:black")
   .page-header
     h3#sign Sign in
-  center
     form(method='POST')
       input(type='hidden', name='_csrf', value=_csrf)
       .col-sm-3.col-sm-offset-2#login
         .form-group
-          label.control-label(for='email') Email
+          br
+          label.control-label(for='email' style="color:white;") Email
           input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus=true)
         .form-group
-          label.control-label(for='password') Password
+          label.control-label(for='password' style= "color:white;") Password
           input.form-control(type='password', name='password', id='password', placeholder='Password')
         .form-group
           button.btn.btn-primary(type='submit')
             i.fa.fa-user
             | Login
           a.btn.btn-link(href='/forgot') Forgot your password?
-        hr
-        a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
-          i.fa.fa-facebook
-          | Sign in with Facebook
-        a.btn.btn-block.btn-twitter.btn-social(href='/auth/twitter')
-          i.fa.fa-twitter
-          | Sign in with Twitter
-        a.btn.btn-block.btn-google-plus.btn-social(href='/auth/google')
-          i.fa.fa-google-plus
-          | Sign in with Google
+      image#hill(src = "../image/hillary_clinton_login.jpg")
+      image#bush(src = "../image/")
+        
+        
       

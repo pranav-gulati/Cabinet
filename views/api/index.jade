@@ -8,5 +8,55 @@ block content
   .row
     .col-md-6
       h2 Choose Issues.
+      .funkyradio
+        .funkyradio-success
+          input#checkbox1(type='checkbox', name='checkbox')
+          label(for='checkbox1') Abortion
+        .funkyradio-success
+          input#checkbox2(type='checkbox', name='checkbox')
+          label(for='checkbox2') Immigration
+        .funkyradio-success
+          input#checkbox3(type='checkbox', name='checkbox')
+          label(for='checkbox3') Foreign Affairs
+        .funkyradio-success
+          input#checkbox4(type='checkbox', name='checkbox')
+          label(for='checkbox4') Healthcare
+        .funkyradio-success
+          input#checkbox5(type='checkbox', name='checkbox')
+          label(for='checkbox5') Environment
     .col-md-6
-      h2 The Shortlist.
+      h2 Choose Candidates.
+      h3 Republican
+      .funkyradio
+        .funkyradio-success
+          input#checkbox6(type='checkbox', name='checkbox')
+          label(for='checkbox6') Jeb Bush
+        .funkyradio-success
+          input#checkbox7(type='checkbox', name='checkbox')
+          label(for='checkbox7') Donald Trump
+        .funkyradio-success
+          input#checkbox8(type='checkbox', name='checkbox')
+          label(for='checkbox8') Chris Christie
+        .funkyradio-success
+          input#checkbox9(type='checkbox', name='checkbox')
+          label(for='checkbox9') Ted Cruz
+      h3 Democratic
+      .funkyradio
+        .funkyradio-success
+          input#checkbox10(type='checkbox', name='checkbox')
+          label(for='checkbox10') Hillary Clinton
+        .funkyradio-success
+          input#checkbox11(type='checkbox', name='checkbox')
+          label(for='checkbox11') Joe Biden
+        .funkyradio-success
+          input#checkbox12(type='checkbox', name='checkbox')
+          label(for='checkbox12') Bernie Sanders
+        .funkyradio-success
+          input#checkbox13(type='checkbox', name='checkbox')
+          label(for='checkbox13') Jim Webb
+  hr
+
+  center
+    button.btn.btn-primary.btn-lg(type='button')
+      | Submit  
+      i.fa.fa-sign-out

@@ -1,20 +1,23 @@
 extends ../layout
 
 block content
+  body(class="bglog")
+  br
+  br
   .page-header
-    h3 Sign up
+    h3.sign Sign up
   form.form-horizontal(id='signup-form', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group
-      label.col-sm-3.control-label(for='email') Email
+      label.col-sm-3.control-label(for='email' style = "color:white;") Email
       .col-sm-3
         input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus)
     .form-group
-      label.col-sm-3.control-label(for='password') Password
+      label.col-sm-3.control-label(for='password' style="color:white;") Password
       .col-sm-3
         input.form-control(type='password', name='password', id='password', placeholder='Password')
     .form-group
-      label.col-sm-3.control-label(for='confirmPassword') Confirm Password
+      label.col-sm-3.control-label(for='confirmPassword' style="color:white;") Confirm Password
       .col-sm-3
         input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password')
     .form-group
@@ -22,23 +25,5 @@ block content
         button.btn.btn-success(type='submit')
           i.fa.fa-user-plus
           | Signup
-      hr
-      .col-sm-offset-1.col-sm-5
-        a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
-          i.fa.fa-facebook
-          | Sign up with Facebook
-        a.btn.btn-block.btn-twitter.btn-social(href='/auth/twitter')
-          i.fa.fa-twitter
-          | Sign up with Twitter
-        a.btn.btn-block.btn-google-plus.btn-social(href='/auth/google')
-          i.fa.fa-google-plus
-          | Sign up with Google
-        a.btn.btn-block.btn-github.btn-social(href='/auth/github')
-          i.fa.fa-github
-          | Sign up with Github
-        a.btn.btn-block.btn-linkedin.btn-social(href='/auth/linkedin')
-          i.fa.fa-linkedin
-          | Sign up with Linkedin
-        a.btn.btn-block.btn-instagram.btn-social(href='/auth/instagram')
-          i.fa.fa-instagram
-          | Sign up with Instagram
+  h3(style = "color:white; font-family:'times'; ") Choose YOUR correct candidate from the most updated and reliable sources.
+  h3(style = "color:white; font-family:'times'; float:right;") Never feel uninformed about elections again. 

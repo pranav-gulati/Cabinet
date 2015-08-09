@@ -1,11 +1,11 @@
 extends ../layout
 
 block content
-  body(id = "bglog")
+  body(class = "bglog")
   br
   br
   .page-header
-    h3#sign Sign in
+    h3.sign Sign in
     form(method='POST')
       input(type='hidden', name='_csrf', value=_csrf)
       .col-sm-3.col-sm-offset-2#login

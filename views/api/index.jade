@@ -64,6 +64,7 @@ block content
     var issues = [false, false, false, false, false];
     var cand = [false, false, false, false, false, false, false, false];
     var name = ["Jeb Bush", "Donald Trump", "Chris Christie", "Ted Cruz", "Hillary Clinton", "Joe Biden", "Bernie Sanders", "Jim Webb"];
+    var pic = ["http://i.imgur.com/gUHqMra.jpg", "http://i.imgur.com/xTJcfLj.jpg","http://i.imgur.com/al4XvC2.png", "http://i.imgur.com/cyblItG.png","http://i.imgur.com/TDftIdR.png","http://i.imgur.com/FEFLcsO.png","http://i.imgur.com/RoMHhzh.png","http://i.imgur.com/vlPBbyJ.png"];
     function submit() {
     if (document.getElementById('checkbox1').checked) issues[0] = true;
     if (document.getElementById('checkbox2').checked) issues[1] = true;
@@ -78,5 +79,18 @@ block content
     if (document.getElementById('checkbox11').checked) cand[5] = true;
     if (document.getElementById('checkbox12').checked) cand[6] = true;
     if (document.getElementById('checkbox13').checked) cand[7] = true;
-    document.getElementById('whole').innerHTML = "<h2>Welcome to Cabinet.</h2><hr/><h3>Learn about your candidates.</h3>";
+    document.getElementById('whole').innerHTML = '<h2>Welcome to Cabinet.</h2><hr/><h3>Learn about your candidates.</h3><div class="row">';
+    var i;
+    for (i = 0; i < 5; i++) {
+      if (cand[i]) {
+        document.getElementById('whole').innerHTML = document.getElementById('whole').innerHTML + '<div class="col-md-3"> <div class="card hovercard"> <div class="cardheader"> </div> <div class="avatar"> <img alt="" src="' + pic[i] + '"> </div> <div class="info"> <div class="title">' + name[i] + '</div> <div class="desc">Republican</div> </div> <div class="bottom"> </div> </div> </div>';
+      }
+    }
+    document.getElementById('whole').innerHTML = document.getElementById('whole').innerHTML + '</div><div class="row">';
+    for (i = 4; i < 8; i++) {
+      if (cand[i]) {
+        document.getElementById('whole').innerHTML = document.getElementById('whole').innerHTML + '<div class="col-md-3"> <div class="card hovercard"> <div class="cardheader"> </div> <div class="avatar"> <img alt="" src="' + pic[i] + '"> </div> <div class="info"> <div class="title">' + name[i] + '</div> <div class="desc">Democratic</div> </div> <div class="bottom"> </div> </div> </div>';
+      }
+    }
+    document.getElementById('whole').innerHTML = document.getElementById('whole').innerHTML + "</div>"
     }

@@ -1,7 +1,7 @@
 extends ../layout
 
 block content
-  body(style ="background-color:black")
+  body(id = "bglog")
   .page-header
     h3#sign Sign in
     form(method='POST')
@@ -19,8 +19,7 @@ block content
             i.fa.fa-user
             | Login
           a.btn.btn-link(href='/forgot') Forgot your password?
-      image#hill(src = "../image/hillary_clinton_login.jpg")
-      image#bush(src = "../image/")
+      
         
         
       
